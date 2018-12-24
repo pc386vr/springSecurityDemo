@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .loginPage("/index")            // ログインフォームのパス
             .failureHandler(new SampleAuthenticationFailureHandler())       // 認証失敗時に呼ばれるハンドラクラス
             .successHandler(successHandler)									// 認証成功時に呼ばれるハンドラクラス
-            .defaultSuccessUrl("/menu")     // 認証成功時の遷移先
+            //.defaultSuccessUrl("/menu")     // 認証成功時の遷移先 SampleAuthenticationSuccessHandlerを使用するためコメントアウト
             .usernameParameter("login_id").passwordParameter("login_password")  // ユーザー名、パスワードのパラメータ名
             .and();
 

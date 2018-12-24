@@ -32,6 +32,7 @@ public class SampleAuthenticationFailureHandler implements
         if(authenticationException instanceof BadCredentialsException){
             errorId = "001";
         }
+		System.out.println("CALL!! " + this.getClass().getName());
 
         // ログイン画面にリダイレクトする
         httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/"

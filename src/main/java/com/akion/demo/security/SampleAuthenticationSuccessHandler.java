@@ -16,9 +16,9 @@ public class SampleAuthenticationSuccessHandler implements AuthenticationSuccess
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
-		// TODO 自動生成されたメソッド・スタブ
-		
-		
+		System.out.println("CALL!! " + this.getClass().getName());
+		// メニュー画面にリダイレクトする
+		response.sendRedirect(request.getContextPath() + "/menu");
 	}
 
 }
